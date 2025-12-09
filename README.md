@@ -1,2 +1,3 @@
 # UserFS
+
 UserFS (1 student) Scrieti un program (script) shell care reprezintă fiecare utilizator activ din sistem printr-un director în care se găseste un fisier procs ce listează procesele curente ale utilizatorului. Toate aceste directoare care contin informatii despre un utilizator activ sunt grupate într-un singur director, numit director rădăcină. Periodic, de exemplu la fiecare 30 de secunde, informatia despre utilizatorii activi se actualizează. Pentru utilizatorii care dispar din sistem în timp, directorul corespunzător va afisa un fisier procs gol si un fisier suplimentar lastlogin care afisează data ultimei sesiuni a utilizatorului în sistem.
