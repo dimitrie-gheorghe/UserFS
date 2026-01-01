@@ -24,6 +24,20 @@ while true; do
 		echo "$procese" > ./procs # listam procesele utilizatorului in fisierul procs
 		cd ..
 	done
+	
+	ls | while read director; do
+		k=1
+		for utilizator in $utilizatori_activi; do
+			if [ "$director" == "$utilizator" ]; then
+				k=0
+				break
+			fi
+		done
+		if [ "$k" == "1" ]; then
+			#aici trebuie sa mai lucrez
+		fi
+
+	done
 
 	break
 	sleep 30 # asteptam 30 de secunde. deocamdata, nu se ajunge aici, pentru ca avem un break
