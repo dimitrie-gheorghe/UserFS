@@ -34,7 +34,13 @@ while true; do
 			fi
 		done
 		if [ "$k" == "1" ]; then
-			#aici trebuie sa mai lucrez
+			echo > ./"$director"/procs # golim procs
+			ultima_data=$(journalctl -u systemd-logind | grep "$director" | tail -n 1)
+			echo "$ultima_data"
+			luna=$(echo "$ultima_data" | awk '{print $1}')
+			ziua=$(echo "$ultima_data" | awk '{print $2}')
+			ora=$(echo "$ultima_data" | awk '{print $3}')
+			echo -e "luna = $luna\nziua = $ziua\nora = $ora" > ./"$director"/lastlogin
 		fi
 
 	done
