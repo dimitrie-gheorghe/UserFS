@@ -36,7 +36,7 @@ while true; do
 		if [ "$k" == "1" ]; then
 			echo > ./"$director"/procs # golim procs
 			ultima_data=$(journalctl -u systemd-logind | grep "$director" | tail -n 1)
-			echo "$ultima_data"
+
 			luna=$(echo "$ultima_data" | awk '{print $1}')
 			ziua=$(echo "$ultima_data" | awk '{print $2}')
 			ora=$(echo "$ultima_data" | awk '{print $3}')
@@ -45,6 +45,5 @@ while true; do
 
 	done
 
-	break
-	sleep 30 # asteptam 30 de secunde. deocamdata, nu se ajunge aici, pentru ca avem un break
+	sleep 30 # asteptam 30 de secunde
 done
